@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | NFT preview card component</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <article class="product">
+        <div class="product__img">
+          <img
+            src="./images/image-equilibrium.jpg"
+            alt="Glass cube standing on its corner with lights reflection inside"
+          />
+          <div class="hover-img">
+            <img
+              src="./images/icon-view.svg"
+              alt="Vector white icon of an eye"
+            />
+          </div>
+        </div>
+        <div class="product__content">
+          <h1 class="product__title hover-cyan">Equilibrium #3429</h1>
+          <p>Our Equilibrium collection promotes balance and calm.</p>
+          <div class="flex-group">
+            <div class="product__price">
+              <span class="sr-only">small cyan crystal icon</span>0.041 ETH
+            </div>
+            <div class="product__time-left">
+              <span class="sr-only">small clock icon</span>3 days left
+            </div>
+          </div>
+        </div>
+        <div class="product__author">
+          <img
+            class="author-icon"
+            src="./images/image-avatar.png"
+            alt="Photo of the creator"
+          />
+          <p>
+            Creation of <span class="author-name hover-cyan">Jules Wyvern</span>
+          </p>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

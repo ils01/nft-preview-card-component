@@ -1,0 +1,219 @@
+:root {
+  --clr-primary-200: hsl(215, 51%, 70%);
+  --clr-primary-500: hsl(178, 100%, 50%);
+
+  /* main BG */
+  --clr-neutral-920: hsl(217, 54%, 11%);
+  /* card BG */
+  --clr-neutral-900: hsl(216, 50%, 16%);
+  /* line */
+  --clr-neutral-700: hsl(215, 32%, 27%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --ff-base: "Outfit", sans-serif;
+
+  --fw-regular: 300;
+  --fw-regular-bolder: 400;
+  --fw-bold: 600;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+body {
+  background-color: var(--clr-neutral-920);
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 400px) {
+  body {
+    font-size: 1.125rem;
+  }
+}
+
+.product {
+  margin: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  max-width: 380px;
+  background-color: var(--clr-neutral-900);
+  color: var(--clr-primary-200);
+}
+
+.product__img {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.product__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.product__title {
+  color: var(--clr-neutral-100);
+  font-size: 1.4rem;
+  font-weight: var(--fw-bold);
+  margin-top: 1.125rem;
+}
+
+.flex-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-group > *::before {
+  display: inline-block;
+}
+
+.product__price {
+  margin-block: 0.4rem;
+  font-weight: var(--fw-bold);
+  color: var(--clr-primary-500);
+}
+
+.product__price::before {
+  margin-right: 7px;
+  vertical-align: middle;
+  content: "";
+  background-image: url("./images/icon-ethereum.svg");
+  width: 11px;
+  height: 18px;
+}
+
+.product__time-left {
+  display: flex;
+  align-items: center;
+  font-weight: var(--fw-regular-bolder);
+}
+
+.product__time-left::before {
+  margin-right: 7px;
+  content: "";
+  background-image: url("./images/icon-clock.svg");
+  width: 17px;
+  height: 17px;
+}
+
+.product__author {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--clr-neutral-700);
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-icon {
+  max-width: 2rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.author-name {
+  color: var(--clr-neutral-100);
+}
+
+.hover-cyan:hover {
+  color: var(--clr-primary-500);
+}
+
+.hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+}
+
+.hover-img:hover {
+  opacity: 1;
+  background-color: hsl(178, 100%, 50%, 0.5);
+}
